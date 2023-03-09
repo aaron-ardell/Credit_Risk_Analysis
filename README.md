@@ -13,7 +13,7 @@ We've been tasked with performing data preparation, statistical reasoning, and m
 
 ## Results:
 
-Random Over Sampler
+### Random Over Sampler
 
 ![This is an image](https://github.com/aaron-ardell/Credit_Risk_Analysis/blob/main/pics/random_oversampler.png)
 
@@ -21,7 +21,7 @@ Random Over Sampler
 - Precision: 99%
 - Recall: 60%
 
-SMOTE
+### SMOTE
 
 ![This is an image](https://github.com/aaron-ardell/Credit_Risk_Analysis/blob/main/pics/smote.png)
 
@@ -29,7 +29,7 @@ SMOTE
 - Precision: 99%
 - Recall: 69%
 
-Cluster Centroids
+### Cluster Centroids
 
 ![This is an image](https://github.com/aaron-ardell/Credit_Risk_Analysis/blob/main/pics/cc.png)
 
@@ -37,15 +37,15 @@ Cluster Centroids
 - Precision: 99%
 - Recall: 40%
 
-SMOTEENN
+### SMOTEENN
 
 ![This is an image](https://github.com/aaron-ardell/Credit_Risk_Analysis/blob/main/pics/smoteenn.png)
 
 - Balance Accuracy Score: 69%
-- Precision: 
-- Recall: 
+- Precision: 99%
+- Recall: 60%
 
-Balanced Random Forest Classifier
+### Balanced Random Forest Classifier
 
 ![This is an image](https://github.com/aaron-ardell/Credit_Risk_Analysis/blob/main/pics/Balanced_random_forest_classifier.png)
 
@@ -53,7 +53,7 @@ Balanced Random Forest Classifier
 - Precision: 99%
 - Recall: 87%
 
-East Ensemble Classifier
+### East Ensemble Classifier
 
 ![This is an image](https://github.com/aaron-ardell/Credit_Risk_Analysis/blob/main/pics/easy_ensemble_ada_boost_classifier.png)
 
@@ -63,19 +63,16 @@ East Ensemble Classifier
 
 ## Summary
 
-For the purpose of analysing credit risk, the most accurate machine learning process would be the first priority to weigh. The accuracy of the process will ensure the most accurate classifying of potential applicants as either high risk or low risk. Second, the sensitivity(recall) score, particularly when it comes to high
+There are a series of criteria to meet to determine the best overall machine learning process for identifying credit risk. First, the Balance Accuracy Score will provide us a glimpse at how reliable our model is performing. Second, the recall(sensitivty) particularly concerning the high risk status of applicants. For this application, it's far better to identify all of the high risk applicants even if that means more low risk applicants are mis-identified as high risk. This way our client does not issue loans to applicants that are unable to repay.
 
+Balance Accuracy Score: 
+- East Ensemble Classifier: 93%
+- Balanced Random Forest Classifier: 79%
+- SMOTEENN: 69%
 
-Overview of the loan prediction risk analysis:
+Recall: 
+- East Ensemble Classifier: 94%
+- Balanced Random Forest Classifier: 87%
+- SMOTE: 69%
 
-The purpose of this analysis is well defined (4 pt)
-Results:
-
-Bullet points reviewing results
-images of results
-
-There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
-Summary:
-
-There is a summary of the results (2 pt)
-There is a recommendation on which model to use, or there is no recommendation with a justification (3 pt)
+The East Ensemble ADA Boost Classifier scored very good in Balanced Accuracy Score and over all Recall. It also had the highest sensitivty rate for the high risk applicants at 92%. This machine learning process would be the best for identifying credit risk for our client, the Lending Club.
